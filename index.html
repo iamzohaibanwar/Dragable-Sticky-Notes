@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Easy Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <div class="add">
+        <span>Add note</span>
+        <i class="fa fa-plus-square-o fa-fw"></i>
+    </div>
+    <div class="add-note">
+        <input name="title" id="title" maxlength="50" placeholder="Title" />
+        <textarea name="text" id="text" cols="25" rows="5" placeholder="Text"></textarea>
+        <button>Add</button>
+    </div>
+
+    <div class="wrapper">
+    </div>
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <div class="mainbar">
+            <span>{{title}}</span>
+            <div class="close"><i class="fa fa-times-circle fa-fw"></i></div>
+            <div class="minimize"><i class="fa fa-minus-square-o fa-fw"></i></div>
+          </div>
+          <pre class="text">{{text}}</pre>
+      </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    font-size: 16px;
+
+    background: white;
+    /* Old browsers */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, white 0%, #f6f6f6 47%, #ededed 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ededed", GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.add {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    z-index: 1000;
+    color: #031634;
+    font-size: 2em;
+    display: flex;
+    align-content: baseline;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.add:hover {
+    color: #585000;
+}
+
+.add span {
+    font-size: 0.6em;
+    font-weight: 700;
+
+}
+
+.add-note {
+    background: rgba(14, 14, 14, 0.7);
+    position: fixed;
+    top: 6em;
+    right: 4em;
+    z-index: 1000;
+    text-align: right;
+    padding: 1em;
+    border-radius: 15px;
+    display: none;
+}
+
+.add-note textarea {
+    width: 100%;
+    resize: none;
+    overflow-x: hidden;
+    border-radius: 5px;
+    border: none;
+}
+
+.add-note input {
+    width: 100%;
+    padding: 8px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 6px 20px;
+    border: none;
+    background: #f0a606;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 200ms;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background: #ffc013;
+}
+
+.add-note.hidden {
+    display: block;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.note {
+    position: absolute;
+    width: 20rem;
+    height: auto;
+    border: 4px solid #033649;
+    border-top: 3 px solid #033649;
+    border-bottom: 3 px solid #033649;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    top: 0;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    box-shadow: 0px 0px 5px 0px rgba(3, 54, 73, 0.75);
+}
+
+.note .mainbar {
+    width: 100%;
+    height: 2em;
+    line-height: 2em;
+    background: #ffb71c;
+    vertical-align: center;
+}
+
+.note .mainbar span {
+    color: #033649;
+    text-align: center;
+    display: inline-block;
+    margin-left: 0.5em;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+
+.note .minimize,
+.note .close {
+    font-size: 1.2em;
+    color: #033649;
+    width: 1em;
+    height: 1em;
+    float: right;
+    margin-right: 0.3em;
+    cursor: pointer;
+}
+
+.note .text {
+    color: #031634;
+    background: #ffc15d;
+    padding: 1em;
+    transition: font-size 0.3s ease-in;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    font-family: 'Poppins', sans-serif;
+}
+
+.minimized {
+    font-size: 0;
+    transition: font-size 0.3s ease-out;
+}
+
+.closed {
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
